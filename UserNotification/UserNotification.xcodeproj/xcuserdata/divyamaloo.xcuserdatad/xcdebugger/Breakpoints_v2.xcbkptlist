@@ -20,5 +20,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF85C6F1-11A3-4657-89EF-CDDCE568CEDC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserNotification/ViewModel/NotificationListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A794F3AA-FAE8-4F8E-830B-C5BEC2ACE1DF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UserNotification/ViewModel/NotificationListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "schedulePlainNotification()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A794F3AA-FAE8-4F8E-830B-C5BEC2ACE1DF - 6a7b1e3091cbbda1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in UserNotification.NotificationListViewModel.schedulePlainNotification() -&gt; ()"
+                  moduleName = "UserNotification"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/divyamaloo/Projects/UserNotifications/UserNotification/UserNotification/ViewModel/NotificationListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "908">
+               </Location>
+               <Location
+                  uuid = "A794F3AA-FAE8-4F8E-830B-C5BEC2ACE1DF - 6a7b1e3091cbbda1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in UserNotification.NotificationListViewModel.schedulePlainNotification() -&gt; ()"
+                  moduleName = "UserNotification"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/divyamaloo/Projects/UserNotifications/UserNotification/UserNotification/ViewModel/NotificationListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "176">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

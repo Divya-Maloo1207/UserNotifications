@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     
     private func configureView() {
         tableView.dataSource = tableViewModel
+        tableView.delegate = tableViewModel
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: tableViewModel.reusableIdentifier)
         view.addSubview(tableView)
     }
