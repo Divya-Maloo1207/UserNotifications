@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D5443B2F2B544ECD0024FB7F /* LocalNotificationsTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5443B2E2B544ECD0024FB7F /* LocalNotificationsTypes.swift */; };
+		D5443B312B544F5A0024FB7F /* NotificationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5443B302B544F5A0024FB7F /* NotificationListViewModel.swift */; };
 		D54DEB4C2B54002300F5F214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54DEB4B2B54002300F5F214 /* AppDelegate.swift */; };
 		D54DEB4E2B54002300F5F214 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54DEB4D2B54002300F5F214 /* SceneDelegate.swift */; };
 		D54DEB502B54002300F5F214 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54DEB4F2B54002300F5F214 /* ViewController.swift */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D5443B2E2B544ECD0024FB7F /* LocalNotificationsTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsTypes.swift; sourceTree = "<group>"; };
+		D5443B302B544F5A0024FB7F /* NotificationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListViewModel.swift; sourceTree = "<group>"; };
 		D54DEB482B54002300F5F214 /* UserNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D54DEB4B2B54002300F5F214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D54DEB4D2B54002300F5F214 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +39,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D5443B2D2B544EA10024FB7F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D5443B2E2B544ECD0024FB7F /* LocalNotificationsTypes.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D5443B322B54500C0024FB7F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D5443B302B544F5A0024FB7F /* NotificationListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		D54DEB3F2B54002300F5F214 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +74,8 @@
 		D54DEB4A2B54002300F5F214 /* UserNotification */ = {
 			isa = PBXGroup;
 			children = (
+				D5443B322B54500C0024FB7F /* ViewModel */,
+				D5443B2D2B544EA10024FB7F /* Utils */,
 				D54DEB4B2B54002300F5F214 /* AppDelegate.swift */,
 				D54DEB4D2B54002300F5F214 /* SceneDelegate.swift */,
 				D54DEB4F2B54002300F5F214 /* ViewController.swift */,
@@ -135,7 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D54DEB502B54002300F5F214 /* ViewController.swift in Sources */,
+				D5443B312B544F5A0024FB7F /* NotificationListViewModel.swift in Sources */,
 				D54DEB4C2B54002300F5F214 /* AppDelegate.swift in Sources */,
+				D5443B2F2B544ECD0024FB7F /* LocalNotificationsTypes.swift in Sources */,
 				D54DEB4E2B54002300F5F214 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
