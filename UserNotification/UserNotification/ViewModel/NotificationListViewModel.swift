@@ -61,5 +61,6 @@ extension NotificationListViewModel: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let type = data[indexPath.row]
         scheduleNotification(of: type)
+        tableView.cellForRow(at: indexPath)?.setSelected(false, animated: true)
     }
 }

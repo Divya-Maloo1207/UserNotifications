@@ -33,5 +33,13 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         print(response.notification.request.identifier)
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print(notification.request.identifier)
+        if notification.request.identifier == "plain" {
+            completionHandler([.badge, .sound, .banner])
+            return
+        }
+    }
 }
 
