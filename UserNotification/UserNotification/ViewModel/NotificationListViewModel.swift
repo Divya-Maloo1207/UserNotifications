@@ -29,7 +29,6 @@ class NotificationListViewModel: NSObject {
             content.subtitle = "😍"
             
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-            let uuid = UUID().uuidString
             let request  = UNNotificationRequest(identifier: "plain", content: content, trigger: trigger)
             
             UNUserNotificationCenter.current().add(request) { error in
