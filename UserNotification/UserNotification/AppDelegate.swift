@@ -6,6 +6,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UNUserNotificationCenter.current().delegate = self
+        
+        let acceptAction = UNNotificationAction(identifier: "ACCEPT_ACTION",
+              title: "aaunga",
+              options: [])
+        let declineAction = UNNotificationAction(identifier: "DECLINE_ACTION",
+              title: "nahi aaunga",
+              options: [])
+        let maybeAction = UNNotificationAction(identifier: "DECLINE_ACTION",
+              title: "dekhtein hain",
+              options: [])
+        let meetingInviteCategory =
+              UNNotificationCategory(identifier: "MEETING_INVITATION",
+              actions: [acceptAction, declineAction, maybeAction],
+              intentIdentifiers: [],
+              hiddenPreviewsBodyPlaceholder: "",
+              options: .customDismissAction)
+        UNUserNotificationCenter.current().setNotificationCategories([meetingInviteCategory])
         UIApplication.shared.registerForRemoteNotifications()
         return true
     }
@@ -36,7 +53,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         print(notification.request.identifier)
-        if notification.request.identifier == "plain" {
+        if notification.request.identifier == "plain" || notification.request.identifier == "actionable" {
             completionHandler([.badge, .sound, .banner])
             return
         }

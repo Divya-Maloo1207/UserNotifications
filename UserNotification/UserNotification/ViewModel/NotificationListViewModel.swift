@@ -8,8 +8,9 @@ class NotificationListViewModel: NSObject {
         switch type {
         case .plainNotification:
             schedulePlainNotification()
+        case .actionableNotification:
+            scheduleActionableNotification()
         case .notificationWithAttachment,
-             .actionableNotification,
              .backgoundNotification:
             print("Scheduling notification of type - \(type.rawValue)")
         }
@@ -36,7 +37,24 @@ class NotificationListViewModel: NSObject {
                     print("Failed to schedule notification")
                 }
             }
-            
+        }
+    }
+    
+    private func scheduleActionableNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Weekly Staff Meeting"
+        content.body = "Every Tuesday at 2pm"
+        content.userInfo = ["MEETING_ID" : "meetingID",
+                            "USER_ID" : "userID" ]
+        content.categoryIdentifier = "MEETING_INVITATION"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request  = UNNotificationRequest(identifier: "actionable", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error {
+                print("Failed to schedule notification")
+            }
         }
     }
 }
