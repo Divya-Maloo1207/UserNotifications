@@ -26,7 +26,7 @@ class NotificationListViewModel: NSObject {
             }
             
             let content = UNMutableNotificationContent()
-            content.title = "Missing you!!"
+            content.title = "Your delivery is here!!"
             content.subtitle = "😍"
             
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
@@ -58,6 +58,8 @@ class NotificationListViewModel: NSObject {
         }
     }
 }
+
+// MARK: Table view delegates
 
 extension NotificationListViewModel: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
